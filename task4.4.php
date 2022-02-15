@@ -1,15 +1,15 @@
 <?php
 
-$del=[];
+function del($d , $i){
+    if($d >= $i && $d % $i==0 ){
 
-function divider(int $d){
-    for($i=1; $i<=$d; $i++){
-        if($d%1==0){
+        echo "$i". PHP_EOL;
 
-            array_push($del , $i);
-        }
+
     }
-    foreach (int $item in $del){
-        echo $item;
-    }
+
+    del($d, ++$i);
+
+
 }
+del(27,1);
