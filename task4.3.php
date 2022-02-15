@@ -1,13 +1,18 @@
 <?php
 /*Написать функцию которая проверяет является ли число простым или нет(продвинутый уровень - использовтаь рекурсию)*/
-function number(int $num)
+function number ($num)
 {
-    if ($num / $num && $num > 1) {
-        echo "True";
-
-    } else {
-        echo "False";
+    
+    for($i=2; $i <= $num; $i++) {
+        if($num % $i == 0) {
+            return false;
+            break;
+        }
+        return true;
+         
+    
     }
+    
 }
 
-number(100);
+var_dump(number(43));
